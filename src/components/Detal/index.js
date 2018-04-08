@@ -18,6 +18,30 @@ class Detal extends React.Component{
               })
             }
           </ReactSwipe>
+          <aside>
+          <p>一元居酒屋 MOTO 单人鳗鱼饭<i class="iconfont">&#xe613;</i></p>
+          <p>当日现杀鲜活鳗鱼入料</p>
+          <p>158元<span>/位</span> <span>￥238</span><span>|</span><span>随时退</span></p>
+          </aside>
+          <section>
+          <h3>商品详情</h3>
+          <p></p>
+          <p>一元居酒屋 MOTO</p>
+          <p>
+          <i class="iconfont">&#xe619;</i>
+           <span>我去 </span>
+           <i class="iconfont">&#xe614;</i>
+          </p>
+          <p>
+          <i class="iconfont">&#xe619;</i>
+           <span>我去 </span>
+           <i class="iconfont">&#xe614;</i>
+          </p>
+          </section>
+           <section>
+          <h3>用户评价</h3>
+          <p></p>
+          </section>
         </div>
     }
    componentDidMount(){
