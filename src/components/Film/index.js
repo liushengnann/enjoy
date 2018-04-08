@@ -33,11 +33,10 @@ class Film extends React.Component{
         </div>
     }
     componentDidMount(){
-    axios("/4/tab/category_product_list.json?category_id=5&sort=1&from_id=0&city_id=140&page=0").then(res=>{
+        axios(`/4/tab/category_product_list.json?category_id=${this.props.match.params.id}&sort=1&from_id=0&city_id=140&page=0`).then(res=>{
         console.log(res.data)
         this.setState({
           filmList:res.data
-
       })
     })
     }

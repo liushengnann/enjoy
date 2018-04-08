@@ -1,6 +1,8 @@
 #home {
   margin-left: 18px;
   margin-right: 18px; }
+  #home .loader {
+    text-align: center; }
   #home h1 {
     margin-top: 35px; }
   #home p {

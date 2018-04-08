@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import axios from 'axios';
+import { withRouter } from "react-router-dom";
 class Side extends React.Component{
     constructor(props){
         super(props);
@@ -25,7 +26,7 @@ class Side extends React.Component{
                 this.props.event();
             }}>
               {this.state.Navlist[0].sub_category_list.map(item=>{
-               return <li><NavLink to="/film">{item.name}</NavLink></li>
+               return <li onClick={this.handleClick.bind(this,item.id)}>{item.name}</li>
               })}
             </ul>
             <p>{this.state.Navlist[1].name}</p>
@@ -60,13 +61,17 @@ class Side extends React.Component{
 
 componentDidMount(){
     axios("/cdn/home/djEvdmlydHVhbC9pbl9jYXRlZ29yeS5qc29uP2NpdHlfaWQ9MTQwJmlzX25ld19sb2NhbD1mYWxzZSZtZDU9ODk3MDUwMTgwZjFmNjIzMWRkNDlhYmNlNTliZjIxYjkmMjAxODA0MDIxODAw.json").then(res=>{
-        console.log(res.data[0].name)
+        //console.log(res.data[0].name)
         this.setState({
           Navlist:res.data
-
       })
     })
     }
+handleClick(data){
+    console.log(data);
+    console.log(this.props.history);
+    this.props.history.push(`/film/${data}`);
+}
 }
 
-export default Side;
+export default withRouter(Side);
