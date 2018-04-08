@@ -2,11 +2,14 @@ import React from "react";
 import "./index.css";
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroller';
+import {
+  NavLink
+} from "react-router-dom";
 class Home extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            datalist:[] 
+            datalist:[]
         }
         this.current = 1;
     }
@@ -15,7 +18,7 @@ class Home extends React.Component{
         <InfiniteScroll
             loadMore={this.handleLoadMore.bind(this)}
             hasMore={true}
-            loader={<div className="loader" key={0}>正在加载...</div>}
+            loader={<div className="loader" key={0}><i className="iconfont">&#xe60f;</i></div>}
         >
             {
             this.state.datalist.map((item,index)=>{
@@ -31,6 +34,14 @@ class Home extends React.Component{
                 })
             }
         </InfiniteScroll>
+        <div id="bottom">
+            <NavLink to="/home">
+             <i className="iconfont"> &#xe62e;</i>
+            </NavLink>
+            <i className="iconfont">&#xe63e;</i>
+            <i className="iconfont">&#xe669;</i>
+            <i className="iconfont">&#xe690;</i>
+        </div>
         </div>
     }
     handleLoadMore(){

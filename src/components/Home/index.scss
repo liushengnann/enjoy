@@ -3,6 +3,10 @@
   margin-right:18px;
   .loader{
     text-align: center;
+    i{
+      font-size:40px;
+    }
+
   }
   section{
 
@@ -30,4 +34,20 @@
       margin-bottom: 23px;
     }
   }  }
+  #bottom{
+    height: 56px;
+    background: #fff;
+    position:fixed;
+    bottom:-2px;
+    left:0;
+    width:100%;
+    border-top:1px solid #f2f2f2;
+    line-height:56px;
+    i{
+      margin-left:36px;
+      margin-right:36px;
+      font-size:30px;
+      color:#a0a0a0;
+    }
+  }
 }
